@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijapur Historical City</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="images/logo.png" alt="" width="300" height="100">
+          <!--  <a class="navbar-brand" href="#">Bijapur Heritage</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><p>About</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#monuments"><p>Monuments</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"><p>Gallery</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><p>Contact</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Header Section -->
+<section id="slider" class="swiper-container ruins-background">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('images/slider1.jpg');">
+            <div class="overlay">
+                <h1 class="highlight-text">Welcome to Bijapur Heritage</h1>
+                <p style="color: white;">Explore the rich history and culture of Bijapur city</p>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/slider2.jpg');">
+            <div class="overlay">
+                <h1 class="highlight-text">Bijapur: Where history whispers through the ancient walls.</h1>
+                <p style="color: white;">Explore the rich history and culture of Bijapur city</p>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/slider3.jpg');">
+            <div class="overlay">
+                <h1 class="highlight-text">In the heart of Karnataka lies Bijapur, a city echoing tales of kings and conquerors</h1>
+                <p style="color: white;">Explore the rich history and culture of Bijapur city</p>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/slider4.jpg');">
+            <div class="overlay">
+                <h1 class="highlight-text">Bijapur: A canvas of heritage, painted with the colors of time.</h1>
+                <p style="color: white;">Explore the rich history and culture of Bijapur city</p>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+
+<!-- Quotes Section -->
+<section id="quotes" class="py-3">
+    <div class="container">
+        <div id="quote-container" class="text-center">
+            <blockquote class="blockquote">
+                <p id="quote-text" class="mb-0">Quote text here</p>
+                <footer id="quote-author" class="blockquote-footer">Author's Name</footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Bijapur</h2>
+            <p style="font-size: 20px;"><a href="https://en.wikipedia.org/wiki/Bijapur" target="_blank">Bijapur</a>, located in the southwestern state of <a href="https://en.wikipedia.org/wiki/Karnataka" target="_blank">Karnataka</a>, India, is a city steeped in history and cultural significance. Renowned for its architectural marvels and historical heritage, Bijapur was once the capital of the <a href="https://en.wikipedia.org/wiki/Adil_Shahi_dynasty" target="_blank">Adil Shahi dynasty</a> in the 16th and 17th centuries. The city boasts a captivating blend of Islamic and Indian architectural styles, with stunning structures like the <a href="#monuments">Gol Gumbaz</a>, an imposing mausoleum with the world's second-largest dome. <a href="#monuments">The Ibrahim Rauza</a>, a splendid tomb and mosque complex, further highlights the city's architectural prowess. Bijapur's rich past is also reflected in its numerous forts, mosques, palaces, and minarets, each narrating a tale of the region's glorious history. As visitors wander through its labyrinthine streets, they are transported back in time, marveling at the city's grandeur and the remarkable legacy it preserves.
+        </div>
+    </section>>
+
+       <!-- Monuments Section -->
+    <section id="monuments" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Historical Monuments</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/MehatarMahal.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Mehtar Mahal</h5>
+                            <p class="card-text">Though modestly sized, Mehtar Mahal dated to 1620 is one of the most elegant structures in the fort; the entry gate in particular has been built in Indo-Saracenic style. The façade has three arches, which depict exquisite "cornice supported on carved corbels". A gateway leads to the Mehtar mosque, which is a three-storey building. </p>
+                            <a href="https://en.wikipedia.org/wiki/Bijapur_Fort#Mehtar_Mahal" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/Jamiyamasjid.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Jamia masjid</h5>
+                            <p class="card-text">Jamia Masjid located in the southeast part of the city, the largest mosque of Bijapur, was started in 1565, but not fully completed. It has an arcaded prayer hall with fine aisles supported on massive piers and has an impressive dome in the façade which has nine bays..</p>
+                            <a href="https://en.wikipedia.org/wiki/Jama_Mosque,_Bijapur" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/Ibrahim_Roza.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Ibrahim Roza</h5>
+                            <p class="card-text">Ibrahim Rauza (‘Rauza’ means "tomb") also known as Ali Rauza, built in 1627, contains the tomb of Ibrahim Adil Shah II and his queen Taj Sultana. It was originally intended to be the tomb for the queen. It is a fine square structure with twin buildings with delicate carvings.</p>
+                            <a href="https://en.wikipedia.org/wiki/Bijapur_Fort#Ibrahim_Rauza" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/BaraKaman.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Barakaman</h5>
+                            <p class="card-text">Barakaman (meaning 12 arches) is a mausoleum of Ali Roza built in 1672. It is located to the north of the citadel and the Gagan Mahal, in the midst of a public garden.</p>
+                            <a href="https://en.wikipedia.org/wiki/Bara_Kaman" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/malik-e-maidan.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Malik-e-Maidan</h5>
+                            <p class="card-text">The Malik-i-Maidan (Master of the Battlefield), also called Burj-E-Sherz, was erected by Ibrahim Adil Shah II. It was named after the Battle of Talikota of 1565 in which the Vijayanagara Empire was routed.</p>
+                            <a href="https://en.wikipedia.org/wiki/Malik-E-Maidan" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card monument-card">
+                        <img src="images/Old_GolGumbaz_1890.jpg" class="card-img-top" alt="Monument 1" height="400px" width="25px">
+                        <div class="card-body">
+                            <h5 class="card-title">Gol Gumbaz</h5>
+                            <p class="card-text">Gol Gumbaz was built in 1626 by Mohammad Adil Shah. It is built on a raised platform surrounded by a large garden. It covers an area of 15,000 square feet (1,400 m2). The dome of the tomb measuring 126 feet (38 m) in diameter at its base is the second largest dome in the world.</p>
+                            <a href="https://en.wikipedia.org/wiki/Gol_Gumbaz" target="_blank" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Gallery Section -->
+<section id="gallery" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Photo Gallery</h2>
+        <div class="row" id="galleryRow">
+            <!-- Add image gallery here -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="images/gallery.jpg" alt="Image 1" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="images/gallery1.jpg" alt="Image 2" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="images/gallery2.jpg" alt="Image 3" class="img-fluid rounded">
+                </div>
+            </div>
+
+    <!-- Map Section -->
+    <section id="map" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Map of the city</h2>
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61102.863562993836!2d75.67633758108654!3d16.82987935163621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc6557d98aa706f%3A0xedd4a1794e8fe8d2!2sVijayapura%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1691640719381!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!--User Gallery Section -->
+    <section>
+    <h2 class="text-center">User Gallery</h2>
+    <div class="container">
+        <div class="row" id="imageContainer"></div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="imageInput">
+                    <button class="btn btn-primary" onclick="uploadImage()">Upload Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container mt-5">
+        <div id="imageContainer" class="row"></div>
+      </div>
+
+      <div class="container mt-3">
+        <div id="uploadMessage" class="alert" role="alert" style="display: none;"></div>
+      </div>
+      </section>
+
+    <!-- Call the function and embed the Instagram post -->
+    <button onclick="fetchAndEmbedInstagramPost()">Fetch Instagram Post</button>
+    <div id="instagramEmbed"></div>
+  
+ <!-- Contact Section -->
+ <section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div>
+                    <h1 class="text-center highlight-text mb-4">Contact Us</h1>
+                    <p>If you have any questions or inquiries, feel free to get in touch with us.</p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                        </div>
+                        <button type="button" class="submit-btn" id="submitBtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="images/logo1.png" style="width: 200px;" style="height: 200px;" alt="Bijapur Heritage Logo" class="rounded-circle mr-3" width="60" height="60">
+                    <div>
+                        <h3>About Us</h3>
+                        <p>Bijapur Heritage is dedicated to preserving and showcasing the rich history and culture of Bijapur city. Explore the architectural marvels and historical significance that define our city.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Details</h3>
+                <p>Email: info@bijapurheritage.com</p>
+                <p>Phone: +91-9518300115</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>&copy; 2023 Bijapur Heritage. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

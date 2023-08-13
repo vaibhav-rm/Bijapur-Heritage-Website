@@ -1,0 +1,94 @@
+ /* Custom Styles */
+ body {
+    background-color: #f3e5cb;
+    font-family: 'Times New Roman', serif;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px 0;
+}
+.monument-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.monument-card:hover .card-title {
+    color: #d4af37;
+}
+.monument-card:hover .card-text {
+    color: #555;
+}
+.highlight-text {
+    color: #d4af37; /* Golden color */
+}
+a {
+    color: #d4af37;
+}
+#quotes {
+background-color: #f9f9f9;
+}
+
+#quote-container {
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quote-text {
+font-size: 24px;
+font-weight: bold;
+}
+
+#quote-author {
+font-size: 18px;
+margin-top: 10px;
+}
+#slider {
+height: 100%;
+margin: 0%;
+padding-bottom: 100px;
+}
+.read-more-btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.read-more-btn:hover {
+    background-color: #c09c2a;
+}
+.submit-btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background-color: #c09c2a;
+}
+/* Hover effects for designer cards */
+.designer-card:hover .image-overlay {
+background-color: rgba(0, 0, 0, 0.6);
+}
+.designer-card:hover .card-title,
+.designer-card:hover .card-text {
+color: #d4af37;
+}
+        /* Style for the swiper images on mobile devices */
+        @media (max-width: 768px) {
+            .swiper-slide {
+                background-size: cover;
+            }
+        }
+        /* Adjust swiper container height on smaller screens */
+        @media (max-width: 768px) {
+            #slider {
+                height: 460px; /* Adjust the height as needed */
+            }
+        }
